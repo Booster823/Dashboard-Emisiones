@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     .attr("height", height)
     .call(
       d3.zoom()
-        .scaleExtent([1, 8]) // Configura el nivel de zoom mínimo y máximo
+        .scaleExtent([1, 8])
         .on("zoom", (event) => {
           mapa.attr("transform", event.transform);
         })
@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
         .then(csvData => {
           // Procesar los datos del CSV
           const datosPorPais = {};
-          const rows = csvData.split("\n").slice(1); // Ignorar encabezado
+          const rows = csvData.split("\n").slice(1);
           rows.forEach(row => {
             const [country, emissions] = row.split(",").map(item => item.trim());
             if (country && emissions) {
@@ -128,13 +128,13 @@ document.addEventListener("DOMContentLoaded", () => {
   // Funcionalidad de botones de zoom
   d3.select("#zoom-in").on("click", () => {
     svg.transition().call(
-      d3.zoom().scaleBy, 1.5 // Incrementa el nivel de zoom
+      d3.zoom().scaleBy, 1.5 
     );
   });
 
   d3.select("#zoom-out").on("click", () => {
     svg.transition().call(
-      d3.zoom().scaleBy, 0.75 // Reduce el nivel de zoom
+      d3.zoom().scaleBy, 0.75 
     );
   });
 });

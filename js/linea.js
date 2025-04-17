@@ -109,7 +109,7 @@ document.addEventListener("DOMContentLoaded", () => {
     .then(csvData => {
       // Procesar los datos del CSV
       const datosMexico = [];
-      const rows = csvData.split("\n").slice(1); // Ignorar encabezado
+      const rows = csvData.split("\n").slice(1);
       rows.forEach(row => {
         const [año, emisiones] = row.split(",").map(item => item.trim());
         if (año && emisiones) {

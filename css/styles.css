@@ -1,4 +1,4 @@
-/* Reset básico */
+/* Estilos generales */
 * {
   margin: 0;
   padding: 0;
@@ -10,7 +10,7 @@ body {
   padding: 0;
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  text-align: center; /* Center text horizontally */
+  text-align: center;
   background-color: #f5f7fa;
   color: #333;
   padding: 1rem;
@@ -25,17 +25,17 @@ header {
 header h1 {
   font-size: 2.5rem;
   color: #1a237e;
-  text-align: justify; /* Justify text for better readability */
+  text-align: justify; 
   margin: 0 auto;
-  max-width: 800px; /* Limit the width for better readability */
+  max-width: 800px; 
 }
 
 header p {
   font-size: 1.2rem;
   color: #555;
-  text-align: justify; /* Justify text for better readability */
+  text-align: justify; 
   margin: 0 auto;
-  max-width: 800px; /* Limit the width for better readability */
+  max-width: 800px; 
 }
 
 /* Secciones principales */
@@ -52,9 +52,9 @@ section h2 {
   font-size: 1.6rem;
   margin-bottom: 0.5rem;
   color: #0d47a1;
-  text-align: center; /* Justify text for better readability */
+  text-align: center; 
   margin: 0 auto;
-  max-width: 800px; /* Limit the width for better readability */
+  max-width: 800px; 
 }
 
 #data-table,
@@ -193,7 +193,7 @@ button {
   cursor: pointer;
 }
 
-/* Responsiveness */
+
 .bloque {
   margin: 20px auto;
   max-width: 1200px;
@@ -204,7 +204,6 @@ button {
   max-width: 100%;
 }
 
-/* Responsive design for smaller screens */
 @media (max-width: 768px) {
   body {
     font-size: 14px;
