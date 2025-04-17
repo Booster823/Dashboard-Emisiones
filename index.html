@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard de Emisiones de CO₂</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <style>
+    .tooltip {
+      position: absolute;
+      background-color: white;
+      border: 1px solid #ccc;
+      padding: 5px;
+      font-size: 12px;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Dashboard de Emisiones de CO₂ Globales</h1>
+  </header>
+  <section>
+    <h2>Objetivo del Dashboard</h2>
+    <p>El cambio climático es uno de los mayores desafíos globales del siglo XXI, impulsado en gran parte por el aumento de las emisiones de dióxido de carbono (CO₂). Este dashboard interactivo tiene como objetivo visualizar y analizar datos reales sobre las emisiones de CO₂, tanto a nivel global como con un enfoque específico en México.
+      
+    <p>A través de gráficos, mapas y tablas dinámicas, buscamos responder preguntas clave como:
+      ¿Cómo han cambiado las emisiones en las últimas décadas?
+      ¿Qué países contribuyen más al problema?
+      ¿Cuál ha sido el papel de México en esta evolución?</p>
+
+      <p>Este dashboard presenta un análisis de las emisiones de CO₂ a nivel global y en México. Incluye gráficos, mapas y tablas para visualizar los datos de manera efectiva, comparando las emisiones de CO₂ en diferentes regiones y países con las emisiones de México, además de identificar los países con mayores emisiones para poder facilitar la toma de conciencia acerca de la problemática del cambio climático.
+      Los datos son proporcionados por la base de datos de de la NASA GISS (Instituto Goddard de Estudios Espaciales).</p>
+  </section></header>
+  <main>
+    <!-- Tarjetas de resumen -->
+    <section id="seccion-resumen" class="bloque">
+      <h2>Resumen Global</h2>
+      <h3>Emisiones de CO₂ por País</h3>
+      <p>En esta sección se presentan las emisiones de CO₂ por país, destacando los países con mayores emisiones y su comparación con México.</p>
+      <div id="resumen" class="contenedor-tarjetas"></div>
+    </section>
+    
+    <!-- Gráfico de líneas -->
+    <section id="seccion-linea" class="bloque">
+      <h2>Evolución de Emisiones en México</h2>
+      <p>Este gráfico muestra la evolución de las emisiones de CO₂ en México a lo largo del tiempo, permitiendo observar tendencias y patrones.</p>
+      <div id="grafico-linea"></div>
+    </section>
+    
+    <script src="js/linea.js"></script>
+    
+    <!-- Mapa interactivo -->
+    <section id="seccion-mapa" class="bloque">
+      <h2>Mapa de Emisiones Globales</h2>
+      <p>Este mapa interactivo muestra las emisiones de CO₂ a nivel global, permitiendo explorar los datos por región y país.</p>
+      <div id="chart-mapa"></div>
+      <div class="zoom-controls">
+        <button id="zoom-in">Acercar</button>
+        <button id="zoom-out">Alejar</button>
+      </div>
+    </section>
+
+    <!-- Tabla dinámica -->
+    <section id="seccion-tabla" class="bloque">
+      <h2>Países con Mayor Emisiones</h2>
+      <p>Esta tabla presenta los países con mayores emisiones de CO₂, permitiendo filtrar y ordenar los datos para un análisis más detallado.</p>
+      <div id="tabla-emisiones"></div>
+    </section>
+  </main>
+
+  <!-- Scripts -->
+  <script src="js/resumen.js"></script>
+  <script src="js/map.js"></script>
+  <script src="js/tabla.js"></script>
+</body>
+</html>
